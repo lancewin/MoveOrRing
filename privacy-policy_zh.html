@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!-- 由 scripts/build_site.sh 从 TakeoffAlarm/Resources 生成，请勿直接编辑：
+     要改内容请改 App 内的那份 HTML，然后重新跑脚本。 -->
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>不动就闹 隐私政策</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+        }
+        h1 {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #000;
+        }
+        h2 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 24px;
+            margin-bottom: 12px;
+            color: #000;
+        }
+        p {
+            margin-bottom: 12px;
+        }
+        ul {
+            margin: 0;
+            padding-left: 20px;
+            margin-bottom: 12px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .highlight {
+            font-weight: 500;
+            color: #00A69A;
+        }
+    </style>
+</head>
+<body>
+    <h1>不动就闹 隐私政策</h1>
+
+    <p>生效日期：2026 年 10 月 3 日</p>
+
+    <p>本应用<span class="highlight">不收集、不上传、不分析</span>你的任何个人数据。你的运动数据只属于你，只存在于你的设备上。</p>
+
+    <h2>一、隐私承诺</h2>
+    <ul>
+        <li><span class="highlight">无需注册、无需登录</span> —— 本应用没有账号体系</li>
+        <li><span class="highlight">没有服务器</span> —— 我们不运营任何接收用户数据的服务端</li>
+        <li><span class="highlight">不收集个人数据</span> —— 不获取姓名、电话、通讯录、位置、广告标识符</li>
+        <li><span class="highlight">不上传数据</span> —— 运动数据仅保存在你的设备本地</li>
+        <li><span class="highlight">无第三方 SDK</span> —— 不接入广告、分析或统计组件</li>
+        <li><span class="highlight">无广告</span> —— 不以广告变现</li>
+    </ul>
+
+    <h2>二、健康数据（HealthKit）</h2>
+    <ul>
+        <li>在<b>你明确授权后</b>，本应用读取「健康」中的三类数据：<span class="highlight">步数、步行+跑步距离、活动能量</span></li>
+        <li>三类数据的读取权限在系统里是<b>分开</b>的：只授权其中一项时，本应用只能读到那一项，其余显示「—」并会点明缺哪一项</li>
+        <li>用途只有一个：<span class="highlight">判断你当天有没有达到自己设定的目标</span>，并在日历与小组件里展示进度</li>
+        <li>本应用<span class="highlight">只读取，不写入</span>，不会创建、修改或删除你的任何健康记录</li>
+        <li>健康数据<b>不会离开你的设备</b>：不上传、不分享给第三方、不用于广告或用户画像</li>
+        <li>你可以随时在「设置 → 隐私与安全性 → 健康 → 不动就闹」中关闭读取授权。关闭后本应用读不到数据，会显示「暂时读不到数据」，并停止发出提醒（不会把读不到算成你没做到）</li>
+    </ul>
+
+    <h2>三、通知权限</h2>
+    <ul>
+        <li>通知权限只用于一件事：<span class="highlight">在你还没达成当天目标时提醒你</span></li>
+        <li>提醒是本机通知，由你的设备自行发出，不经过任何服务器</li>
+        <li>什么时候提醒、提醒几次，完全由你在 App 内设置</li>
+        <li>拒绝通知权限不会影响记录、日历、小组件等其它功能</li>
+        <li>通知被拒绝时，本应用不会再往系统里排提醒（排了也发不出去），并在今天页给出完整的开启路径</li>
+    </ul>
+
+    <h2>四、App Group 共享（与桌面小组件）</h2>
+    <ul>
+        <li>为了让桌面小组件显示进度，本应用与自己的小组件扩展通过 <span class="highlight">App Group</span> 共享一份很小的数据</li>
+        <li>共享内容仅限：<span class="highlight">今天的目标值、当前进度、当天状态、连续天数、最近 7 天的进度百分比</span></li>
+        <li>共享范围<span class="highlight">只到小组件</span>，不包含位置、心率、体重等其它健康数据</li>
+        <li>传递只发生在设备本地的共享容器内，不会传输到外部或服务器</li>
+    </ul>
+
+    <h2>五、订阅与支付</h2>
+    <ul>
+        <li>支付由 <span class="highlight">Apple App Store</span> 处理。我们不接触、不存储任何支付信息（卡号、账单地址等一概没有）</li>
+        <li>订阅与你的 Apple ID 绑定，本应用没有独立账户系统</li>
+        <li>提供周订阅、月订阅与年订阅，均为自动续期，可随时取消</li>
+        <li>本应用不读取、不保存你的 Apple ID 或邮箱地址</li>
+    </ul>
+
+    <h2>六、数据存储与删除</h2>
+    <ul>
+        <li>目标设置与每日记录存储在设备本地（<span class="highlight">SwiftData</span>）</li>
+        <li>提醒设置与语言偏好存储在设备本地的偏好设置中（其中语言偏好放在 App Group，供小组件读取）</li>
+        <li>本应用不提供数据导出与备份功能；上述数据只保存在你的设备上，也不会被本应用外发</li>
+        <li><span class="highlight">卸载本应用即彻底清除上述全部本地数据</span>，我们这边没有任何副本可删（因为我们从未收到过）</li>
+    </ul>
+
+    <h2>七、第三方服务</h2>
+    <ul>
+        <li>不接入任何第三方分析、统计 SDK</li>
+        <li>不接入任何第三方广告 SDK</li>
+        <li>不嵌入任何追踪组件，也不做跨 App 追踪</li>
+        <li>唯一的第三方是 Apple（健康数据、通知、内购），各自受 Apple 的隐私政策约束</li>
+    </ul>
+
+    <h2>八、儿童隐私</h2>
+    <p>本应用不面向儿童收集任何信息，事实上也不向任何人收集信息。</p>
+
+    <h2>九、本政策的变更</h2>
+    <p>若本政策有实质变更，我们会在 App 内以显著方式提示，并更新页面顶部的生效日期。</p>
+
+    <h2>十、联系我们</h2>
+    <p>对本政策有任何疑问，请联系：<span class="highlight">lancewin@foxmail.com</span></p>
+
+    <p style="margin-top: 30px; font-size: 14px; color: #999;">联系方式：lancewin@foxmail.com</p>
+    <p style="margin-top:28px;font-size:13px;color:#999;"><a href="privacy-policy_en.html" style="color:#00A69A;">English</a> · English</p>
+</body>
+</html>

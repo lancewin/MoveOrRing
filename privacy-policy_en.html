@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!-- 由 scripts/build_site.sh 从 TakeoffAlarm/Resources 生成，请勿直接编辑：
+     要改内容请改 App 内的那份 HTML，然后重新跑脚本。 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoveOrRing Privacy Policy</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+        }
+        h1 {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #000;
+        }
+        h2 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 24px;
+            margin-bottom: 12px;
+            color: #000;
+        }
+        p {
+            margin-bottom: 12px;
+        }
+        ul {
+            margin: 0;
+            padding-left: 20px;
+            margin-bottom: 12px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .highlight {
+            font-weight: 500;
+            color: #00A69A;
+        }
+    </style>
+</head>
+<body>
+    <h1>MoveOrRing Privacy Policy</h1>
+
+    <p>Effective date: October 3, 2026</p>
+
+    <p>This app <span class="highlight">does not collect, upload, or analyse</span> any of your personal data. Your activity data is yours alone, and it exists only on your device.</p>
+
+    <h2>1. Privacy commitment</h2>
+    <ul>
+        <li><span class="highlight">No sign-up, no login</span> — there is no account system</li>
+        <li><span class="highlight">No servers</span> — we operate no backend that receives user data</li>
+        <li><span class="highlight">No personal data collected</span> — no name, phone number, contacts, location, or advertising identifier</li>
+        <li><span class="highlight">Nothing is uploaded</span> — activity data is kept only on your device</li>
+        <li><span class="highlight">No third-party SDKs</span> — no advertising, analytics, or tracking components</li>
+        <li><span class="highlight">No ads</span> — we do not make money from advertising</li>
+    </ul>
+
+    <h2>2. Health data (HealthKit)</h2>
+    <ul>
+        <li>After <b>you explicitly grant permission</b>, the app reads three kinds of data from Health: <span class="highlight">steps, walking + running distance, and active energy</span></li>
+        <li>In iOS those three permissions are <b>separate</b>: if you allow only one, the app can read only that one — the others show "—", and the app tells you which one is missing</li>
+        <li>They are used for one thing only: <span class="highlight">deciding whether you have reached the goal you set for the day</span>, and showing your progress in the calendar and the widget</li>
+        <li>The app <span class="highlight">only reads, never writes</span> — it does not create, modify, or delete any of your health records</li>
+        <li>Health data <b>never leaves your device</b>: it is not uploaded, not shared with third parties, and not used for advertising or profiling</li>
+        <li>You can turn read access off at any time in "Settings → Privacy & Security → Health → MoveOrRing". Once it is off, the app cannot read your data, says "can't read your data right now", and stops sending reminders (it never counts "unreadable" as a missed day)</li>
+    </ul>
+
+    <h2>3. Notification permission</h2>
+    <ul>
+        <li>Notification permission is used for one thing only: <span class="highlight">reminding you while you have not yet reached the day's goal</span></li>
+        <li>Reminders are local notifications — your device delivers them itself, with no server involved</li>
+        <li>When they arrive and how many you get is entirely up to the settings you choose in the app</li>
+        <li>Denying notification permission does not affect records, the calendar, the widget, or any other feature</li>
+        <li>If notifications are denied, the app schedules nothing further with the system (a scheduled alert could not be delivered anyway) and shows the full path to enable them on the Today screen</li>
+    </ul>
+
+    <h2>4. App Group sharing (with the home screen widget)</h2>
+    <ul>
+        <li>So the home screen widget can show your progress, the app and its own widget extension share a very small amount of data through an <span class="highlight">App Group</span></li>
+        <li>What is shared is limited to: <span class="highlight">today's goal, current progress, the day's status, the streak, and the last 7 days' completion percentages</span></li>
+        <li>It is shared <span class="highlight">with the widget only</span> — no location, heart rate, body weight, or other health data is included</li>
+        <li>The transfer happens inside the on-device shared container; nothing is transmitted outside the device or to a server</li>
+    </ul>
+
+    <h2>5. Subscriptions and payment</h2>
+    <ul>
+        <li>Payment is handled by the <span class="highlight">Apple App Store</span>. We never touch or store payment information of any kind (no card numbers, no billing addresses)</li>
+        <li>Subscriptions are tied to your Apple ID; the app has no separate account system</li>
+        <li>Weekly, monthly, and yearly subscriptions are offered; all renew automatically and can be cancelled at any time</li>
+        <li>The app never reads or stores your Apple ID or email address</li>
+    </ul>
+
+    <h2>6. Data storage and deletion</h2>
+    <ul>
+        <li>Your goal settings and daily records are stored on the device (<span class="highlight">SwiftData</span>)</li>
+        <li>Reminder settings and your language preference are stored in the device's local preferences (the language preference lives in the App Group so the widget can read it)</li>
+        <li>The app offers no data export or backup feature; the data above stays on your device and is never sent anywhere by the app</li>
+        <li><span class="highlight">Deleting the app erases all of that local data</span> — and there is no copy on our side to delete, because we never received one</li>
+    </ul>
+
+    <h2>7. Third-party services</h2>
+    <ul>
+        <li>No third-party analytics or statistics SDKs</li>
+        <li>No third-party advertising SDKs</li>
+        <li>No tracking components, and no cross-app tracking</li>
+        <li>The only third party is Apple (health data, notifications, in-app purchase), each governed by Apple's own privacy policy</li>
+    </ul>
+
+    <h2>8. Children's privacy</h2>
+    <p>This app collects no information from children — in fact, it collects no information from anyone.</p>
+
+    <h2>9. Changes to this policy</h2>
+    <p>If this policy changes in a meaningful way, we will announce it prominently in the app and update the effective date at the top of this page.</p>
+
+    <h2>10. Contact us</h2>
+    <p>If you have any questions about this policy, please contact: <span class="highlight">lancewin@foxmail.com</span></p>
+
+    <p style="margin-top: 30px; font-size: 14px; color: #999;">Contact: lancewin@foxmail.com</p>
+    <p style="margin-top:28px;font-size:13px;color:#999;">English · <a href="privacy-policy_zh.html" style="color:#00A69A;">中文</a></p>
+</body>
+</html>

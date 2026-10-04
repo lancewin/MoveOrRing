@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!-- 由 scripts/build_site.sh 从 TakeoffAlarm/Resources 生成，请勿直接编辑：
+     要改内容请改 App 内的那份 HTML，然后重新跑脚本。 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoveOrRing Support</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+        }
+        h1 {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #000;
+        }
+        h2 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 24px;
+            margin-bottom: 12px;
+            color: #000;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 16px;
+            margin-bottom: 8px;
+            color: #000;
+        }
+        p {
+            margin-bottom: 12px;
+        }
+        ul, ol {
+            margin: 0;
+            padding-left: 20px;
+            margin-bottom: 12px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .highlight {
+            font-weight: 500;
+            color: #00A69A;
+        }
+    </style>
+</head>
+<body>
+    <h1>MoveOrRing Support</h1>
+
+    <p>What it does, in one line: <span class="highlight">it watches whether you have walked enough today, and keeps reminding you until you have.</span></p>
+
+    <h2>What it does</h2>
+
+    <h3>Where the data comes from</h3>
+    <ul>
+        <li>It reads <span class="highlight">steps / distance / active energy</span> from the system Health app to decide whether you have reached the day's goal</li>
+        <li><span class="highlight">Read-only</span>: it never writes to or modifies your health data</li>
+        <li>Data stays on the device: <span class="highlight">no server, no account to register, nothing uploaded</span></li>
+    </ul>
+
+    <h3>Permissions it needs</h3>
+    <ul>
+        <li><span class="highlight">Health read access</span>: without it the app cannot read steps / distance / active energy. In iOS the three are granted <b>separately</b> — if you allow steps only, the other two show "—", and the app tells you which one is missing. A denied permission is never counted as 0 steps</li>
+        <li><span class="highlight">Notification permission</span>: without it, not a single reminder can go out. The app asks once when you first reach the main screen (notifications first, then Health, so the two system prompts do not stack). If it is denied, the Today screen shows the full path: "Settings → Notifications → MoveOrRing → Allow Notifications"</li>
+        <li>Nothing else is needed: no sign-up, no login, no contacts, no location</li>
+    </ul>
+
+    <h3>Daily goal</h3>
+    <ul>
+        <li>Pick one of three: steps / distance / active energy, and set the number yourself</li>
+        <li>Change it whenever you like — <span class="highlight">the new goal takes effect immediately, today included</span>. The goal is yours; we do not set a bar for you</li>
+        <li>The percentages in the calendar are computed against <span class="highlight">the goal in force on that day</span>, so changing the goal later never rewrites your past</li>
+    </ul>
+
+    <h3>Reminders (local notifications)</h3>
+    <ul>
+        <li><span class="highlight">Without a subscription</span>: <b>no reminders are sent at all</b> (reminders are the one paid feature in this app). With one, up to 10 a day</li>
+        <li><span class="highlight">You add the reminder times yourself</span>: we <span class="highlight">never schedule one on your behalf</span> — no times added, no reminders. Add them in "Mine → Reminders"; they start ringing from the moment you add them</li>
+        <li><span class="highlight">Members</span>: up to 10 a day, arranged in two ways — ① name a few times of day; ② give a window and an interval (for example 12:00–20:00 every 2 hours). The screen lists right away exactly when today's reminders will arrive</li>
+        <li>Every reminder <span class="highlight">for today</span> states how much was still missing at that moment (for example "Last 2 hours today — 2,140 steps to go"); reminders scheduled ahead for future days state the goal only, because how far you will have walked by then is not even known to the system yet</li>
+        <li>Once you reach the goal, the rest of the day's reminders are cancelled automatically</li>
+        <li>Two reminders are at least 10 minutes apart; any time of day is allowed</li>
+    </ul>
+
+    <h3>Records</h3>
+    <ul>
+        <li>The calendar gives each day a progress ring — <span class="highlight">the length of the ring is that day's completion percentage</span>, so you can see at a glance which days landed and which fell short</li>
+        <li>Tap a day for its detail: steps / distance / active energy, that day's goal and completion percentage, and an explanation of the day's status</li>
+        <li>Below that is the month summary: days on target, current streak, daily average steps, and total distance</li>
+    </ul>
+
+    <h3>Rest days</h3>
+    <ul>
+        <li><span class="highlight">3 a month, and free users get them too</span>: being ill, travelling, a downpour — one day does not have to count against you</li>
+        <li>On a rest day there are no reminders, the day is left out of the success rate (it is not in the denominator either), and the streak does not break</li>
+        <li>Unused days do not carry over to the next month</li>
+    </ul>
+
+    <h3>Achievement receipt</h3>
+    <ul>
+        <li>When you reach the goal, one positive notification goes out (for example "11,204 steps today · 6-day streak")</li>
+        <li>Free users get it too, and <span class="highlight">there is no switch</span> — it is the only place in this app that says something nice about you, and we want it to stay</li>
+    </ul>
+
+    <h3>Widget</h3>
+    <ul>
+        <li>See today's progress right on the home screen: the small size is a percentage ring; the medium adds "current / goal" and how much is left; the large adds the last 7 days and the streak</li>
+        <li>It shares data with the app through an App Group, so <span class="highlight">you can see it without opening the app</span></li>
+        <li>There is a "Refresh" button on the widget; tapping it reads your health data right away</li>
+    </ul>
+
+    <h3>How to add the widget to your home screen</h3>
+    <ol>
+        <li>Unlock your iPhone and touch and hold an empty spot on the home screen (or long-press an existing widget) until the icons start to jiggle and Edit Mode begins.</li>
+        <li>Tap the <span class="highlight">"+"</span> button at the top left to open the widget gallery.</li>
+        <li>Type "<span class="highlight">MoveOrRing</span>" in the search field, then open this app's widget list.</li>
+        <li>Pick a size (small / medium / large) and tap "Add Widget".</li>
+    </ol>
+    <p>The widget is refreshed by the system roughly every 15–30 minutes (iOS decides exactly when). For the latest numbers, tap the "Refresh" button on the widget.</p>
+
+    <h3>Sharing</h3>
+    <ul>
+        <li>On the Records screen, or on a single day's detail screen, tap the share button at the top right: the day's or the month's data is rendered as an image and handed to the system share sheet</li>
+        <li>The image contains activity data only — <span class="highlight">no location, no heart rate, no other health details</span></li>
+        <li>The image is generated on your device and passes through no server</li>
+        <li>The app offers no export or backup: data lives only on this device (deleting the app takes it with it) and is never uploaded anywhere</li>
+    </ul>
+
+    <h2>What membership gives you</h2>
+    <ul>
+        <li><span class="highlight">Up to 10 reminders a day</span> (without a subscription: none at all)</li>
+        <li><span class="highlight">Arrange today's times freely</span>: name a few moments yourself, or give a window + interval and let the app fill it (for example 12:00–20:00 every 2 hours)</li>
+        <li>Every reminder states how much was still missing — not "time to move", but "2,140 steps to go"</li>
+    </ul>
+    <p>These features are <span class="highlight">available to everyone, no membership needed</span>: calendar and records, goal settings, the achievement receipt, rest days, sharing, and the widget.</p>
+
+    <h2>Managing your subscription</h2>
+    <ul>
+        <li>Weekly, monthly, and yearly subscriptions are offered; all renew automatically and can be cancelled at any time</li>
+        <li>A subscription renews within 24 hours before it expires, charged to the payment method linked to your Apple ID</li>
+        <li>Manage or cancel it in "Settings → Apple ID → Subscriptions"</li>
+        <li>At the bottom of the paywall there is "Restore Purchases", which brings back a membership you already bought (reach that screen from the membership card on the Mine screen, or from "Reminders")</li>
+        <li>After cancelling, you can keep using the member features until the paid period ends</li>
+    </ul>
+
+    <h2>FAQ</h2>
+
+    <h3>Q: The step count here differs slightly from the Health app's — which is right?</h3>
+    <p>A: iPhone and Apple Watch can both record the same stretch of activity, and simply adding them up inflates the total. This app slices the day into hourly pieces, takes the largest source in each piece, and adds those up — so the number is usually a little lower than the plain sum of all sources in Health. That is deliberate: one watch should not double your day.</p>
+
+    <h3>Q: Is it recording while the app is not open?</h3>
+    <p>A: Yes. The data comes from the system Health app; this app does not need to run in the background, and the home screen widget is refreshed by the system on its own. Reminder times are scheduled by the app, and <span class="highlight">every time you open it, or bring it back to the foreground, they are rescheduled against your latest progress</span> — just use it the way you normally would.</p>
+
+    <h3>Q: If I close the app completely, will I still get reminders?</h3>
+    <p>A: Yes. Reminders are local notifications and arrive on time even when the app is not running — the app fills the notification allowance iOS gives it (3 a day schedules 19 days ahead; 1 a day reaches 58 days), so it keeps ringing even if you do not open it for days. The one step that does need the app to be open, or woken by the system, is <i>cancelling the rest of the day's reminders after you hit the goal</i> — if you never open it, you may get one extra reminder that no longer means anything. Treat it as a check-in.</p>
+
+    <h3>Q: I get no reminders at all — what should I check first?</h3>
+    <p>A: Three things, in order: ① open the app — if there is a banner at the top of the Today screen saying notifications are not allowed or were turned off, follow the path it gives you; ② in "Settings → Notifications → MoveOrRing" make sure "Allow Notifications" is on and that a Focus mode is not left running; ③ come back to the app and confirm your reminder times are still in the list (members: up to 10; without a subscription none will ring). <span class="highlight">When notification permission is denied, the app schedules nothing further with the system</span> (a scheduled alert could not be delivered anyway), so after fixing the permission, open the app once so it can reschedule.</p>
+
+    <h3>Q: Why does it say "can't read your data right now"?</h3>
+    <p>A: It means this particular read from Health came back empty. The usual causes: access was never granted, read access was turned off in "Settings → Privacy & Security → Health → MoveOrRing", or there genuinely are no samples for the day yet. In that case <span class="highlight">the day is not counted as missed and no reminder is sent</span>.<br>Note also that the three data types are granted <b>separately</b> in iOS: if steps is the only one allowed, distance and active energy show "—" and the app names the one that is missing.</p>
+
+    <h3>Q: If I change my goal, how is today counted?</h3>
+    <p>A: <span class="highlight">Immediately against the new goal, today included</span>. History does not move: each day in the calendar is computed against <span class="highlight">the goal in force on that day</span>. If you already reached today's goal and then raise it, today goes back to "not there yet" — reaching the goal is judged against the current number.</p>
+
+    <h3>Q: What happens after a rest day?</h3>
+    <p>A: On a rest day you are not reminded, the day is left out of the success rate (it is not in the denominator either), and the streak does not break. Three days a month, free users included.</p>
+
+    <h3>Q: How is the streak calculated?</h3>
+    <p>A: Only a day that is <span class="highlight">genuinely missed</span> breaks it. A rest day, an unreadable day, and the imported history from your first authorisation all keep it alive; a day with no record at all breaks it.</p>
+
+    <h3>Q: If I switch phones or reinstall the app, is my data still there?</h3>
+    <p>A: Data and reminders are stored on this device, so deleting the app clears them. The app offers no export or backup — if you want a long-term record, take a screenshot on the Records screen or share that day's image.</p>
+
+    <h3>Q: Is my health data ever uploaded?</h3>
+    <p>A: No. The app has no server and needs no account; activity data stays on your device (SwiftData). See the Privacy Policy for details.</p>
+
+    <h3>Q: What membership plans are there, and how do I cancel?</h3>
+    <p>A: Weekly, monthly, and yearly, all auto-renewing. To cancel, go to "Settings → Apple ID → Subscriptions", pick this app, and tap "Cancel Subscription"; you can keep using the member features until the paid period ends.</p>
+
+    <h3>Q: The widget does not update or shows no number — what can I do?</h3>
+    <p>A: First tap "Refresh" on the widget. If it says it cannot read your health data, open the app once and confirm Health access is in order. If it still does not update, long-press the widget and choose "Reload", or remove it and add it again.</p>
+
+    <p style="margin-top: 30px; font-size: 14px; color: #999;">Contact: lancewin@foxmail.com</p>
+    <p style="margin-top:28px;font-size:13px;color:#999;">English · <a href="support_zh.html" style="color:#00A69A;">中文</a></p>
+</body>
+</html>
